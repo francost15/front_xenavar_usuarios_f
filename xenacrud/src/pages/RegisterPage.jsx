@@ -53,9 +53,11 @@ export const RegisterPage = () => {
           errors.password && (
             <p className='text-red-500'>Password is required</p>
         )}
-        <button type='submit' className='bg-red-700 text-white px-4 py-2 rounded-md my-2'>
-          Register
-        </button>
+        <div className="flex justify-center">
+            <button type='submit' className='bg-red-700 text-white px-4 py-2 rounded-md my-2 hover:bg-red-500'>
+                Register
+            </button>
+        </div>
       </form>
       <p className="flex gap-x-2 justify-between">
           Ya tienes una cuenta? <Link to="/login" className="text-red-500"> 

@@ -14,7 +14,7 @@ export const LoginPage = () => {
     signin(data);
   });
   useEffect(() => {
-    if (isAuthenticated) navigate("/tasks");
+    if (isAuthenticated) navigate("/productos");
   }, [isAuthenticated])
   
   return (
@@ -45,9 +45,11 @@ export const LoginPage = () => {
           {errors.password && (
             <p className="text-red-500">Password is required</p>
           )}
-          <button className='bg-red-600 text-white px-4 py-2 rounded-md my-2' type="submit">
-            Login
-          </button>
+        <div className="flex justify-center">
+            <button type='submit' className='bg-red-700 text-white px-4 py-2 rounded-md my-2 hover:bg-red-500'>
+                Login
+            </button>
+        </div>
         </form>
         <p className="flex gap-x-2 justify-between">
           No tienes una cuenta aun? <Link to="/register" className="text-red-500"> 

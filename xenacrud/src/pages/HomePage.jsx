@@ -1,7 +1,7 @@
-
+import './HomeStyles.css'
 function HomePage() {
   return (
-    <div>HomePage</div>
+    <div>gola</div>
   )
 }
 

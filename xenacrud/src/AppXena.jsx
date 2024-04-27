@@ -2,16 +2,16 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import { LoginPage,RegisterPage } from './pages';
 import { AuthProvider } from './context/AuthContext';
 import HomePage from './pages/HomePage';
-import TasksPage from './pages/TasksPage';
-import TaskFormPage from './pages/TaskFormPage';
 import ProfilePage from './pages/ProfilePage';
 import ProtectedRoute from './ProtectedRoute';
-import { TaskProvider } from './context/TasksContext';
+import { ProductProvider } from './context/ProductosContext';
 import NavBar from './components/NavBar';
+import ProductoFormPage from './pages/ProductoFormPage';
+import ProductosPage from './pages/ProductoPage';
 export const AppXena = () => {
   return (
     <AuthProvider>
-      <TaskProvider>
+      <ProductProvider>
       <BrowserRouter>
         <main className='container mx-auto px-10'>
         <NavBar/>
@@ -21,16 +21,16 @@ export const AppXena = () => {
           <Route path='/register' element={<RegisterPage/>} />
           
           <Route element={<ProtectedRoute/>} >
-            <Route path='/tasks' element={<TasksPage/>} />
-            <Route path='/add-task' element={<TaskFormPage/>} />
-            <Route path='/tasks/:id' element={<TaskFormPage/>} />
+            <Route path='/productos' element={<ProductosPage/>} />
+            <Route path='/add-producto' element={<ProductoFormPage/>} />
+            <Route path='/productos/:id' element={<ProductoFormPage/>} />
             <Route path='/profile' element={<ProfilePage/>} />
           </Route>
 
         </Routes>
         </main>
       </BrowserRouter>
-      </TaskProvider>
+      </ProductProvider>
     </AuthProvider>
   )
 }
