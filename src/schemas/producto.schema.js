@@ -13,5 +13,7 @@ export const createProductoSchema = z.object({
     cantidad: z.number({
         required_error: "cantidad is required",
     }),
-
+    imagen: z.string({
+        required_error: "imagen is required",
+    })
 });

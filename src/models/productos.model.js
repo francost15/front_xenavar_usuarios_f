@@ -1,5 +1,5 @@
-import mongoose from 'mongoose';
-const taskSchema = new mongoose.Schema({
+import mongoose, { version } from 'mongoose';
+const productoSchema = new mongoose.Schema({
     nombre: {
         type: String,
         required: true,
@@ -16,9 +16,19 @@ const taskSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
+    tipo:{
+        type: String,
+        required: true,
+    },
+    marca:{
+        type: String,
+        required: true,
+    },
     imagen: {
         type: String,
+        required: true,
     },
+
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
@@ -26,6 +36,8 @@ const taskSchema = new mongoose.Schema({
     }
 },{
     timestamps: true,
+},{
+    versionKey: false
 }
 );
-export default mongoose.model("productos", taskSchema);
+export default mongoose.model("productos", productoSchema);

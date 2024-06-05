@@ -2,23 +2,25 @@ import { useForm } from "react-hook-form";
 import { useAuth } from "../context/AuthContext";
 import {Link,useNavigate} from 'react-router-dom';
 import { useEffect } from "react";
-
 export const LoginPage = () => {
-  const { register,
-      handleSubmit, 
-      formState: { errors } 
-    } = useForm();
-  const { signin, errors: signinErrors,isAuthenticated } = useAuth();
-    const navigate = useNavigate();
+  // Utilizando el hook useForm de react-hook-form para manejar el estado y validación del formulario
+  const { register, handleSubmit, formState: { errors } } = useForm();
+
+  // Utilizando el hook useAuth de nuestro contexto AuthContext para acceder a la funcionalidad de autenticación
+  const { signin, errors: signinErrors, isAuthenticated } = useAuth();
+
+  // Utilizando el hook useNavigate de react-router-dom para navegar a diferentes rutas en la aplicación
+  const navigate = useNavigate();
   const onSubmit = handleSubmit((data) => {
     signin(data);
   });
+  //aqui el use effect va autentica y si es true navega a productos
   useEffect(() => {
     if (isAuthenticated) navigate("/productos");
   }, [isAuthenticated])
   
   return (
-    <div className="flex h-[calc(100vh-100px)] items-center justify-center">
+    <div className="bg-neutral-800 text-white flex h-[calc(100vh-100px)] items-center justify-center">
       <div className="bg-zinc-900 max-w-md w-full p-10 rounded-md ">
         {signinErrors.map((error, i) => (
           <div key={i} className="bg-red-500 p-2 text-white text-center my-2">

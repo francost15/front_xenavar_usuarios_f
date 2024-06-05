@@ -14,15 +14,15 @@ export const SearchComponent = () => {
         {(isInputShown || window.innerWidth > 768) && (
           <input
             type="text"
-            className="w-full px-3 py-2 text-xs md:text-sm text-gray-700 placeholder-gray-600 border rounded-lg focus:outline-none focus:border-red-500"
-            placeholder="¿Qué podemos ayudarte a encontrar?"
+            className="w-full px-8 py-2 md:text-sm text-gray-600 placeholder-gray-600 border rounded-lg focus:outline-none focus:border-red-600"
+            placeholder="¿Qué podemos ayudar a encontrar?"
           />
         )}
       </div>
       <button type="submit" className="ml-2" onClick={handleIconClick}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-5 h-5 text-gray-700"
+          className="w-5 h-5 text-gray-600"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"

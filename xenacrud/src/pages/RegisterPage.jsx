@@ -3,6 +3,7 @@ import {useForm} from 'react-hook-form';
 import { useAuth } from '../context/AuthContext';
 import { useEffect } from 'react';
 import {Link, useNavigate} from 'react-router-dom';
+
 export const RegisterPage = () => {
   const {register,handleSubmit, formState: {
     errors
@@ -18,7 +19,7 @@ export const RegisterPage = () => {
     signup(values);
   })
   return (
-    <div className="flex h-[calc(100vh-100px)] items-center justify-center ">
+    <div className="bg-neutral-800 text-white flex h-[calc(100vh-100px)] items-center justify-center ">
     <div className='bg-zinc-900 max-w-md p-10 rounded-md mt-6'>
         {
           registerErrors.map((error, i) => (
@@ -60,9 +61,9 @@ export const RegisterPage = () => {
         </div>
       </form>
       <p className="flex gap-x-2 justify-between">
-          Ya tienes una cuenta? <Link to="/login" className="text-red-500"> 
-          Inicia en Login</Link>
-        </p>
+        Ya tienes una cuenta? <Link to="/login" className="text-red-500"> 
+        Inicia en Login</Link>
+      </p>
     </div>
     </div>
   )
