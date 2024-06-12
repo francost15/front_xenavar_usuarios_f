@@ -4,12 +4,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faSignalMessenger } from '@fortawesome/free-brands-svg-icons'
 import { NavBarCategories } from '../components/NavBarCategories';
 import { Link } from 'react-router-dom';
+import imagen1 from '../assets/imagen1.jpg';
+import mutant from "../assets/mutant.jpg";
+import raw from "src/assets/raw.jpg";
+import gat from "src/assets/gat.png" ;
+import muscletech from "src/assets/Muscletech.png";
+import insane from "src/assets/insanelogo.png";
+import dragon from "src/assets/Dragonlogo.jpg" ;
+import img1 from "src/assets/img1.jpg";
+import img2 from "src/assets/img2.jpg";
+import img3 from 'src/assets/img3.jpg';
 
 const images = [
-  'src/assets/img1.jpg',
-  'src/assets/img2.jpg',
-  'src/assets/img3.jpg',
-  'src/assets/img1.jpg',
+  {img1},
+  {img2},
+  {img3},
+  {img1},
 ];
 
 export function HomePage() {
@@ -57,22 +67,22 @@ export function HomePage() {
     <h1 className='text-center text-3xl font-bold mt-8'>Marcas de Xenavar</h1>
     <div className='grid grid-cols-3 gap-3 mt-6'>
           <Link to="/marcas/Dragon">
-            <CardsComponent imagen="src/assets/Dragonlogo.jpg" className="w-72 h-full object-scale-down" />
+            <CardsComponent imagen={dragon} className="w-72 h-full object-scale-down" />
           </Link>
           <Link to="/marcas/Insane">
-            <CardsComponent imagen="src/assets/insanelogo.png" className="w-72 h-full object-scale-down" />
+            <CardsComponent imagen={insane} className="w-72 h-full object-scale-down" />
           </Link>
           <Link to="/marcas/Muscletech">
-            <CardsComponent imagen="src/assets/Muscletech.png" className="w-72 h-full object-scale-down" />
+            <CardsComponent imagen={muscletech} className="w-72 h-full object-scale-down" />
           </Link>
           <Link to="/marcas/Gat">
-            <CardsComponent imagen="src/assets/gat.png" className="w-72 h-full object-scale-down" />
+            <CardsComponent imagen={gat} className="w-72 h-full object-scale-down" />
           </Link>
           <Link to="/marcas/Raw">
-            <CardsComponent imagen="src/assets/raw.jpg" className="w-72 h-full object-scale-down" />
+            <CardsComponent imagen={raw} className="w-72 h-full object-scale-down" />
           </Link>
           <Link to="/marcas/Mutant">
-            <CardsComponent imagen="src/assets/mutant.jpg" className="w-72 h-full object-scale-down" />
+            <CardsComponent imagen={mutant} className="w-72 h-full object-scale-down" />
           </Link>
         </div>
   </div>
@@ -95,7 +105,7 @@ export function HomePage() {
       <div className="flex justify-center  mx-auto px-4 sm:px-6 lg:px-8">
       <div className=" flex flex-col lg:flex-row w-full max-w-4xl">
         <div className="w-full lg:w-1/2 flex flex-col items-center space-y-4 mt-10 lg:mt-0 ">
-          <img src="src/assets/imagen1.jpg" alt="imagen promo" className="w-full h-auto rounded-lg" />
+          <img src={imagen1} alt="imagen promo" className="w-full h-auto rounded-lg" />
         </div>
         <div className="mt-12 flex flex-col items-center w-full lg:w-1/2 space-y-4">
           <h1 className="md:mt-12 text-3xl lg:text-4xl font-bold text-center">Encuentra todos los productos que necesites</h1>
