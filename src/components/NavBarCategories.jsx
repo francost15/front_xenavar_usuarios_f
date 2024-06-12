@@ -46,21 +46,21 @@ export const NavBarCategories = () => {
                 <Link
                   onClick={toggleMenu}
                   className="px-4 py-2 mt-2 text-sm font-semibold text-center hover:text-red-600 md:hover:text-red-600"
-                  href="/productos/proteinas"
+                  to="/productos/proteinas"
                 >
                   PROTEÍNAS
                 </Link>
                 <Link
                   onClick={toggleMenu}
                   className="px-4 py-2 mt-2 text-sm font-semibold text-center hover:text-red-600"
-                  href="/productos/creatinas"
+                  to="/productos/creatinas"
                 >
                   CREATINAS
                 </Link>
                 <Link
                   onClick={toggleMenu}
                   className="px-4 py-2 mt-2 text-sm font-semibold text-center hover:text-red-600"
-                  href="/productos/vitaminas"
+                  to="/productos/vitaminas"
                 >
                   VITAMINAS
                 </Link>
