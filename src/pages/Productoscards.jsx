@@ -18,9 +18,11 @@ const FilterSidebar = ({ filters, onChange }) => {
   const filterOptions = (
     <div className="filters-container p-4 space-y-4 bg-white shadow-lg rounded">
       <select name="type" onChange={handleFilterChange} value={filters.type} className="w-full p-2 border rounded">
-        <option value="">Todos los tipos</option>
-        <option value="tipo1">Tipo 1</option>
-        <option value="tipo2">Tipo 2</option>
+        <option value="">Todos las cateogrias</option>
+        <option value="Proteína">Proteina</option>
+        <option value="creatina">Creatina</option>
+        <option value="vitamina">Vitamina</option>
+        <option value="preworkout">Preworkout</option>
       </select>
       <select name="price" onChange={handleFilterChange} value={filters.price} className="w-full p-2 border rounded">
         <option value="">Todos los precios</option>
@@ -30,8 +32,11 @@ const FilterSidebar = ({ filters, onChange }) => {
       </select>
       <select name="marca" onChange={handleFilterChange} value={filters.marca} className="w-full p-2 border rounded">
         <option value="">Todas las marcas</option>
-        <option value="marca1">Marca 1</option>
-        <option value="marca2">Marca 2</option>
+        <option value="Raw">Raw</option>
+        <option value="Mutant">Mutant</option>
+        <option value="Optimum Nutrition">Optimum Nutrition</option>
+        <option value="BSN">BSN</option>
+        <option value="Dymatize">Dymatize</option>
       </select>
     </div>
   );
