@@ -1,6 +1,6 @@
 import FooterComponent from "../components/FooterComponent"
 import { NavBarCategories } from "../components/NavBarCategories"
-import acerca from "src/assets/acerca.jpeg";
+import acerca from "../assets/acerca.jpeg";
 
 export const AcercaPage = () => {
   return (
