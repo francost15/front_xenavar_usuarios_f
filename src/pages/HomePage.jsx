@@ -6,14 +6,14 @@ import { NavBarCategories } from '../components/NavBarCategories';
 import { Link } from 'react-router-dom';
 import imagen1 from '../assets/imagen1.jpg';
 import mutant from "../assets/mutant.jpg";
-import raw from "src/assets/raw.jpg";
-import gat from "src/assets/gat.png" ;
-import muscletech from "src/assets/Muscletech.png";
-import insane from "src/assets/insanelogo.png";
-import dragon from "src/assets/Dragonlogo.jpg" ;
-import img1 from "src/assets/img1.jpg";
-import img2 from "src/assets/img2.jpg";
-import img3 from 'src/assets/img3.jpg';
+import raw from "../assets/raw.jpg";
+import gat from "../assets/gat.png" ;
+import muscletech from "../assets/Muscletech.png";
+import insane from "../assets/insanelogo.png";
+import dragon from "../assets/Dragonlogo.jpg" ;
+import img1 from "../assets/img1.jpg";
+import img2 from "../assets/img2.jpg";
+import img3 from '../assets/img3.jpg';
 
 const images = [
   {img1},
