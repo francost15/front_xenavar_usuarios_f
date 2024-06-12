@@ -79,7 +79,7 @@ export function Productoscards() {
           setProductos(allProductos);
           setFilteredProductos(filterProducts(allProductos, filters));
         } else {
-          console.error('No products found');
+          console.error('No products fouunnd');
         }
       } catch (error) {
         console.error('fetchProductos error:', error);
