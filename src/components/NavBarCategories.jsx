@@ -43,27 +43,27 @@ export const NavBarCategories = () => {
               <nav
                 className={`flex flex-col items-center pb-4 md:pb-0 ${isOpen ? 'flex' : 'hidden'} md:flex md:flex-row md:items-center md:justify-center sm:justify-end `}
               >
-                <a
+                <Link
                   onClick={toggleMenu}
                   className="px-4 py-2 mt-2 text-sm font-semibold text-center hover:text-red-600 md:hover:text-red-600"
                   href="/productos/proteinas"
                 >
                   PROTEÍNAS
-                </a>
-                <a
+                </Link>
+                <Link
                   onClick={toggleMenu}
                   className="px-4 py-2 mt-2 text-sm font-semibold text-center hover:text-red-600"
                   href="/productos/creatinas"
                 >
                   CREATINAS
-                </a>
-                <a
+                </Link>
+                <Link
                   onClick={toggleMenu}
                   className="px-4 py-2 mt-2 text-sm font-semibold text-center hover:text-red-600"
                   href="/productos/vitaminas"
                 >
                   VITAMINAS
-                </a>
+                </Link>
                 <Link
                   onClick={toggleMenu}
                   className="px-4 py-2 mt-2 text-sm font-semibold text-center hover:text-red-600"

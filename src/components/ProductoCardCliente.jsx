@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import sinimagen from '../assets/sinimagen.png';
 export function ProductoCardC({producto}) {
     // Asegúrate de que la variable base termina con '/' si no está presente
     return (
@@ -23,10 +22,6 @@ export function ProductoCardC({producto}) {
                         width={100} 
                         height={100} 
                         className="object-cover"
-                        onError={(e) => { 
-                            e.target.onerror = null; 
-                            e.target.src = {sinimagen}; // Proporciona una URL de imagen de reserva
-                        }}
                     />   
                 </div>
                 <a href='https://api.whatsapp.com/send?phone=522224568189&text=Hola,%20me%20puede%20cotizar%20esto%20' target="_blank" rel="noopener noreferrer">
